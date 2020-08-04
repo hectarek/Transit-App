@@ -39,7 +39,7 @@ public class TransitService {
 
     private Location getCoordinates(String description) {
         description = description.replace(" ", "+");
-        String url = geocodingUrl + description + "+GA&Key=" + googleApiKey;
+        String url = geocodingUrl + description + "+GA&key=" + googleApiKey;
         RestTemplate restTemplate = new RestTemplate();
         GeocodingResponse response = restTemplate.getForObject(url, GeocodingResponse.class);
         return response.results.get(0).geometry.location;
