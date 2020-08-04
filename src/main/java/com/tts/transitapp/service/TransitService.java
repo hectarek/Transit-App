@@ -74,7 +74,9 @@ public class TransitService {
                     bus.distance = (double) Math.round(distance * 100) / 100;
                     nearbyBuses.add(bus);
                 }
+
             }
+
         }
         Collections.sort(nearbyBuses, new BusComparator());
         return nearbyBuses;

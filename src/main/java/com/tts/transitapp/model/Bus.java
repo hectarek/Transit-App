@@ -1,7 +1,7 @@
 package com.tts.transitapp.model;
 
 public class Bus {
-    
+
     public String ADHERENCE;
     public String BLOCKID;
     public String BLOCK_ABBR;
@@ -22,18 +22,18 @@ public class Bus {
     public Bus(String aDHERENCE, String bLOCKID, String bLOCK_ABBR, String dIRECTION, String lATITUDE, String lONGITUDE,
             String mSGTIME, String rOUTE, String sTOPID, String tIMEPOINT, String tRIPID, String vEHICLE,
             double distance) {
-        ADHERENCE = aDHERENCE;
-        BLOCKID = bLOCKID;
-        BLOCK_ABBR = bLOCK_ABBR;
-        DIRECTION = dIRECTION;
-        LATITUDE = lATITUDE;
-        LONGITUDE = lONGITUDE;
-        MSGTIME = mSGTIME;
-        ROUTE = rOUTE;
-        STOPID = sTOPID;
-        TIMEPOINT = tIMEPOINT;
-        TRIPID = tRIPID;
-        VEHICLE = vEHICLE;
+        this.ADHERENCE = aDHERENCE;
+        this.BLOCKID = bLOCKID;
+        this.BLOCK_ABBR = bLOCK_ABBR;
+        this.DIRECTION = dIRECTION;
+        this.LATITUDE = lATITUDE;
+        this.LONGITUDE = lONGITUDE;
+        this.MSGTIME = mSGTIME;
+        this.ROUTE = rOUTE;
+        this.STOPID = sTOPID;
+        this.TIMEPOINT = tIMEPOINT;
+        this.TRIPID = tRIPID;
+        this.VEHICLE = vEHICLE;
         this.distance = distance;
     }
 

@@ -14,22 +14,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class TransitController {
-    
+
     @Autowired
-    private TransitService apiService;
+    private TransitService apiService; 
 
     @GetMapping("/buses")
     public String getBusesPage(Model model){
-        model.addAttribute("request", new BusRequest());
-        return "index";
+        model.addAttribute("request", new BusRequest()); 
+        return "index"; 
     }
 
     @PostMapping("/buses")
-    public String getNearbyBuses(BusRequest request, Model model) {
+    public String getNearbyBuses(BusRequest request, Model model){
         List<Bus> buses = apiService.getNearbyBuses(request);
         model.addAttribute("buses", buses);
-        model.addAttribute("request", request);
-        return "index";
+        model.addAttribute("request", request); 
+        return "index"; 
     }
     
 }

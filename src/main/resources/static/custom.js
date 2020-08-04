@@ -1,15 +1,17 @@
-var map;
-function initMap() {
+let map; 
+function initMap(){
+
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: parseFloat(busLocations[0].LATITUDE), lng: parseFloat(busLocations[0].LONGITUDE) },
+        center: { lat: parseFloat(busLocation[0].LATITUDE), lng: parseFloat(busLocation[0].LONGITUDE)},
         zoom: 15,
-        scrollwheel: false
+        scrollwheel: false, 
     });
-	
-    for (i=0; i<busLocations.length; i++){
-        var marker = new google.maps.Marker({
-            position: { lat: parseFloat(busLocations[i].LATITUDE), lng: parseFloat(busLocations[i].LONGITUDE) },
-            map: map,
-        });
+
+    for (let i = 0; i < busLocation.length; i++){
+        let marker = new google.maps.Marker({
+            position: {lat: parseFloat(busLocation[i].LATITUDE), lng: parseFloat(busLocation[i].LONGITUDE)},
+            map:map, 
+        })
     }
+
 }
